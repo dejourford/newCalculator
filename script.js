@@ -12,15 +12,17 @@ let clearBtn = document.querySelector('.clear')
 
 let number = document.querySelectorAll('.number')
 let operators = document.querySelector('.operator')
-let decimal = document.querySelector('.decimal')
+let decimalBtn = document.querySelector('.decimal')
 let equals = document.querySelector('.equals')
 
+// create event listener for number clicks
 number.forEach((number) => number.addEventListener('click', function(e){
     console.log(e.target.textContent)
     numberPressed = e.target.textContent
     useNumber()
 }))
 
+// create function for numbers when clicked
 function useNumber() {
     if (currentScreen.textContent == 0) {
         currentScreen.textContent = ""
@@ -31,6 +33,17 @@ function useNumber() {
     }
 }
 
+// create function for clear button
 clearBtn.addEventListener('click', function(){
     currentScreen.textContent = 0
 })
+
+// create function for decimal button
+decimalBtn.addEventListener('click', function(e){
+    console.log('clicked!')
+    decimal = e.target.textContent
+    if (currentScreen.textContent.length < 13){
+        currentScreen.textContent += decimal
+    }    
+}) 
+    
