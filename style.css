@@ -8,13 +8,18 @@ body {
 }
 
 .Btn {
-    height: 75px;
+    height: 70px;
     width: 75px;
     border: none;
     background: none;
     font-size: 40px;
     margin: 15px;
 }
+
+.Btn:active {
+    transform: translateY(5px);	
+}
+
 
 .number {
     border: 2px solid lightblue;
@@ -62,14 +67,14 @@ body {
 }
 
 .screen {
-    border: 1px solid orangered;
+    border: 2px solid gold;
     width: 300px;
     height: 75px;
-    margin: 10px;
+    margin: 15px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 4px;
+    justify-content: center;
 }
 
 .firstRow {
@@ -82,5 +87,9 @@ body {
 }
 
 .current {
-    font-size: 40px;
+    font-size: 35px;
+}
+
+footer {
+    margin-top: 50px;
 }
