@@ -2,6 +2,7 @@
 let previousValue = ""
 let currentValue = ""
 let operator = ""
+let solution = ""
 
 
 
@@ -10,13 +11,13 @@ let previousScreen = document.querySelector('.previous')
 let currentScreen = document.querySelector('.current')
 let clearBtn = document.querySelector('.clear')
 
-let number = document.querySelectorAll('.number')
-let operators = document.querySelector('.operator')
+let numbers = document.querySelectorAll('.number')
+let operators = document.querySelectorAll('.operator')
 let decimalBtn = document.querySelector('.decimal')
 let equals = document.querySelector('.equals')
 
 // create event listener for number clicks
-number.forEach((number) => number.addEventListener('click', function(e){
+numbers.forEach((number) => number.addEventListener('click', function(e){
     console.log(e.target.textContent)
     numberPressed = e.target.textContent
     useNumber()
@@ -47,3 +48,25 @@ decimalBtn.addEventListener('click', function(e){
     }    
 }) 
     
+// define operations
+function divide(previousValue, currentValue) {
+    solution = (previousValue / currentValue)
+}
+
+function multiply(previousValue, currentValue) {
+    solution = (previousValue * currentValue)
+}
+
+function subtract(previousValue, currentValue) {
+    solution = (previousValue - currentValue)
+}
+
+function add(previousValue, currentValue) {
+    solution = (previousValue + currentValue)
+}
+
+// create event listener for operation button clicks
+operators.forEach((operator) => operator.addEventListener('click', function(e){
+    console.log('clicked!')
+    // console.log(e.target.textContent)
+}))
