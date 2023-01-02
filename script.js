@@ -39,6 +39,12 @@ clearBtn.addEventListener('click', function(){
     currentScreen.textContent = 0
 })
 
+clearBtn.addEventListener('dblclick', function(){
+    currentScreen.textContent = 0
+    previousScreen.textContent = 0
+})
+
+
 // create function for decimal button
 decimalBtn.addEventListener('click', function(e){
     console.log('clicked!')
@@ -68,5 +74,10 @@ function add(previousValue, currentValue) {
 // create event listener for operation button clicks
 operators.forEach((operator) => operator.addEventListener('click', function(e){
     console.log('clicked!')
-    // console.log(e.target.textContent)
+    console.log(`${e.target.textContent} has been clicked`)
+    // e.target.textContent = operator
+    previousValue = currentScreen.textContent
+    previousScreen.textContent = previousValue
+    currentScreen.textContent = 0
+    
 }))
