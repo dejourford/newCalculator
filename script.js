@@ -58,22 +58,26 @@ decimalBtn.addEventListener('click', function(e){
 // define operations
 function divide(previousValue, currentValue) {
     solution = (previousValue / currentValue)
+    previousScreen.textContent = `${previousValue} / ${currentValue}`
     currentScreen.textContent = solution
     
 }
 
 function multiply(previousValue, currentValue) {
     solution = (previousValue * currentValue)
+    previousScreen.textContent = `${previousValue} * ${currentValue}`
     currentScreen.textContent = solution
 }
 
 function subtract(previousValue, currentValue) {
     solution = (previousValue - currentValue)
+    previousScreen.textContent = `${previousValue} - ${currentValue}`
     currentScreen.textContent = solution
 }
 
 function add(previousValue, currentValue) {
     solution = (previousValue + currentValue)
+    previousScreen.textContent = `${previousValue} + ${currentValue}`
     currentScreen.textContent = solution
 }
 
