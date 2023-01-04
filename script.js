@@ -60,6 +60,10 @@ function divide(previousValue, currentValue) {
     solution = (previousValue / currentValue)
     previousScreen.textContent = `${previousValue} / ${currentValue}`
     currentScreen.textContent = solution
+    if (currentScreen.textContent.length > 13){
+        roundedNumber = solution.toFixed(10)
+        currentScreen.textContent = roundedNumber
+    }
     
 }
 
